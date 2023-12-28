@@ -1,0 +1,57 @@
+@use "/src/style/reset";
+@use "/src/style/color";
+@use "/src/style/font";
+@use "/src/style/animation";
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 30px;
+  gap: 15px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 42px;
+  font-weight: font.$font-weight-bold;
+  @include animation.fadeInSlideUp(1.5s);
+  margin-bottom: 10px;
+}
+
+.title-detail-container {
+  color: color.$Gray800;
+  font-size: font.$font-size-18;
+  font-weight: font.$font-weight-medium;
+  @include animation.fadeInSlideUp(1.5s);
+}
+
+.section-container {
+  display: flex;
+  gap: 4px;
+}
+
+.section-title {
+  @include animation.fadeInSlideUp(1.5s);
+
+  font-size: font.$font-size-32;
+  font-weight: font.$font-weight-medium;
+}
+
+.section-contents-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.section-contents-detail {
+  display: flex;
+  flex-direction: column;
+}

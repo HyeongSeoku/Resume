@@ -1,0 +1,15 @@
+@keyframes fade-in-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin fadeInSlideUp($duration: 1s) {
+  transform: translateY(10px);
+  animation: fade-in-slide-up $duration ease-out forwards;
+}
