@@ -1,19 +1,16 @@
 @use "/src/style/color";
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 $font-family-default: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
   "Malgun Gothic", "맑은 고딕", arial, sans-serif;
 $font-color-default: color.$Gray900;
 
-$font-size-42: 42px;
-$font-size-32: 32px;
-$font-size-24: 24px;
-$font-size-21: 21px;
-$font-size-18: 18px;
-$font-size-16: 16px;
-$font-size-14: 14px;
-$font-size-12: 12px;
-$font-size-10: 10px;
-$font-size-8: 8px;
+$size-xlarge: 3rem;
+$size-large: 2.5rem;
+$size-medium: 2rem;
+$size-small: 1.5rem;
+$size-xsmall: 1rem;
 
 $font-weight-bold: 700;
 $font-weight-medium: 500;
@@ -21,20 +18,29 @@ $font-weight-small: 300;
 
 // TODO : 해당 부분에 mobile 적용
 @mixin ResumeMainTitle {
-  font-size: $font-size-24;
+  font-size: $size-xlarge;
+  font-weight: $font-weight-bold;
 }
 
 @mixin ResumeSectionTitle {
-  font-size: $font-size-18;
+  font-size: $size-large;
+  font-weight: $font-weight-bold;
 }
 
-@mixin ResumeSectionTitle {
-  font-size: $font-size-18;
+@mixin ResumeSectionDetailTitle {
+  font-size: $size-medium;
+  font-weight: $font-weight-medium;
+}
+
+@mixin DurationText {
+  font-size: $size-xsmall;
+  color: color.$Gray600;
 }
 
 // default font style
 body {
-  font-size: $font-size-14;
+  font-size: $size-small;
   color: $font-color-default;
   line-height: 1.2;
+  font-family: "Pretendard";
 }
