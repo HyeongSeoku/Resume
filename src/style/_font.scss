@@ -6,11 +6,11 @@ $font-family-default: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
   "Malgun Gothic", "맑은 고딕", arial, sans-serif;
 $font-color-default: color.$Gray900;
 
-$size-xlarge: 3rem;
-$size-large: 2.5rem;
-$size-medium: 2rem;
-$size-small: 1.5rem;
-$size-xsmall: 1rem;
+$pc-xlarge: 60px;
+$pc-large: 45px;
+$pc-medium: 32px;
+$pc-small: 21px;
+$pc-xsmall: 12px;
 
 $font-weight-bold: 700;
 $font-weight-medium: 500;
@@ -18,28 +18,32 @@ $font-weight-small: 300;
 
 // TODO : 해당 부분에 mobile 적용
 @mixin ResumeMainTitle {
-  font-size: $size-xlarge;
+  font-size: $pc-xlarge;
   font-weight: $font-weight-bold;
 }
 
 @mixin ResumeSectionTitle {
-  font-size: $size-large;
+  font-size: $pc-large;
   font-weight: $font-weight-bold;
 }
 
 @mixin ResumeSectionDetailTitle {
-  font-size: $size-medium;
+  font-size: $pc-medium;
   font-weight: $font-weight-medium;
 }
 
+@mixin PostionText {
+  font-size: $pc-xsmall;
+}
+
 @mixin DurationText {
-  font-size: $size-xsmall;
+  font-size: $pc-xsmall;
   color: color.$Gray600;
 }
 
 // default font style
 body {
-  font-size: $size-small;
+  font-size: $pc-small;
   color: $font-color-default;
   line-height: 1.2;
   font-family: "Pretendard";
