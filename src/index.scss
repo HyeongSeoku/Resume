@@ -3,6 +3,16 @@
 @use "/src/style/font";
 @use "/src/style/animation";
 
+html[data-theme="dark"] {
+  background-color: color.$Dark-mode-bg;
+  color: color.$Dark-mode-text;
+}
+
+html[data-theme="light"] {
+  background-color: color.$Light-mode-bg;
+  color: color.$Light-mode-text;
+}
+
 .header-container {
   display: flex;
   flex-direction: column;
@@ -81,7 +91,8 @@
 .work-experience-detail-title-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 2;
+  width: 450px;
+  justify-content: flex-start;
 }
 
 .section-contents-title {
@@ -95,7 +106,7 @@
   flex-direction: column;
   margin-left: 15px;
   font-size: font.$pc-small;
-  gap: 15px;
+  gap: 25px;
 }
 
 .section-contents-detail-list {
@@ -111,12 +122,14 @@
 
 .work-experience-detail-content {
   font-size: font.$pc-small;
-  flex-grow: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .work-experience-detail-content-title {
   font-weight: font.$font-weight-bold;
-  margin: 12px 0 8px;
+  margin: 0 0 8px;
 }
 
 .work-experience-detail-content-detail-list-container {
