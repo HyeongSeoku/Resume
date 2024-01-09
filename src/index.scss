@@ -3,6 +3,7 @@
 @use "/src/style/font";
 @use "/src/style/animation";
 
+// THEMA
 html[data-theme="dark"] {
   background-color: color.$Dark-mode-bg;
   color: color.$Dark-mode-text;
@@ -31,14 +32,14 @@ html[data-theme="light"] {
   gap: 30px;
   margin: 0 auto;
   max-width: 1000px;
-  // @media screen {
+}
 
-  // }
+.screen-in {
+  @include animation.fadeInSlideUp(1.5s);
 }
 
 .title {
   @include font.ResumeMainTitle;
-  @include animation.fadeInSlideUp(1.5s);
   margin-bottom: 10px;
 }
 
@@ -46,7 +47,6 @@ html[data-theme="light"] {
   color: color.$Gray800;
   font-size: font.$pc-small;
   font-weight: font.$font-weight-medium;
-  @include animation.fadeInSlideUp(1.5s);
   line-height: 1.3;
 }
 
@@ -57,8 +57,13 @@ html[data-theme="light"] {
   margin-top: 10px;
 }
 
+.section-column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
 .section-title {
-  @include animation.fadeInSlideUp(1.5s);
   @include font.ResumeSectionTitle;
   margin-bottom: 20px;
 }
@@ -68,6 +73,8 @@ html[data-theme="light"] {
   flex-direction: row;
   align-items: baseline;
   gap: 30px;
+  min-width: 0;
+  flex-basis: auto;
 }
 
 .section-contents-title-container {
@@ -78,6 +85,10 @@ html[data-theme="light"] {
 
 .corp-logo {
   width: 50px;
+}
+
+.github-small-logo {
+  width: 15px;
 }
 
 .position-text {
@@ -107,6 +118,14 @@ html[data-theme="light"] {
   margin-left: 15px;
   font-size: font.$pc-small;
   gap: 25px;
+  min-width: 0;
+}
+
+.section-contents-detail-column-container {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .section-contents-detail-list {
@@ -171,9 +190,9 @@ html[data-theme="light"] {
   }
 }
 
-// .skill-chip{
-
-// }
-
-// .education-status-chip {
-// }
+.spreading-color {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include animation.colorSpread(black);
+}
