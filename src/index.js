@@ -12,7 +12,12 @@ const io = new IntersectionObserver((entries) => {
 });
 
 // FIXME: querySelectorAll props 수정 필요함 -> classname 하나 주고 해당 클래스 네임으로 처리 예정
-const $items = document.querySelectorAll("div");
+// const $items = document.querySelectorAll("div");
+// $items.forEach((item) => {
+//   io.observe(item);
+// });
+
+const $items = document.querySelectorAll(".screen-animation");
 $items.forEach((item) => {
   io.observe(item);
 });
