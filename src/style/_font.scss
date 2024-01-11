@@ -12,33 +12,57 @@ $pc-medium: 32px;
 $pc-small: 21px;
 $pc-xsmall: 12px;
 
+$mobile-h1-size: 36px;
+$mobile-h2-size: 24px;
+$mobile-b1-size: 20px;
+$mobile-b2-size: 18px;
+$mobile-b3-size: 16px;
+$mobile-p1-size: 14px;
+$mobile-p2-size: 12px;
+$mobile-p3-size: 10px;
+
 $font-weight-bold: 700;
 $font-weight-medium: 500;
 $font-weight-small: 300;
 
-// TODO : 해당 부분에 mobile 적용
-@mixin ResumeMainTitle {
-  font-size: $pc-xlarge;
+@mixin H1 {
+  font-size: $mobile-h1-size;
   font-weight: $font-weight-bold;
 }
 
-@mixin ResumeSectionTitle {
-  font-size: $pc-large;
+@mixin H2 {
+  font-size: $mobile-h2-size;
   font-weight: $font-weight-bold;
 }
 
-@mixin ResumeSectionDetailTitle {
-  font-size: $pc-medium;
+@mixin B1 {
+  font-size: $mobile-b1-size;
   font-weight: $font-weight-medium;
 }
 
-@mixin PostionText {
-  font-size: $pc-xsmall;
+@mixin B2 {
+  font-size: $mobile-b2-size;
+  font-weight: $font-weight-medium;
 }
 
-@mixin DurationText {
-  font-size: $pc-xsmall;
-  color: color.$Gray600;
+@mixin B3 {
+  font-size: $mobile-b3-size;
+  font-weight: $font-weight-medium;
+}
+
+@mixin P1 {
+  font-size: $mobile-p1-size;
+  font-weight: $font-weight-medium;
+}
+
+@mixin P2 {
+  font-size: $mobile-p2-size;
+  font-weight: $font-weight-small;
+}
+
+@mixin P3 {
+  font-size: $mobile-p3-size;
+  font-weight: $font-weight-small;
 }
 
 // default font style
