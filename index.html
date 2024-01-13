@@ -9,12 +9,12 @@
   <body>
     <header class="header-container">dd</header>
     <main class="main-container">
-      <h1 class="title">
+      <h1 class="title screen-animation">
         안녕하세요
         <br />
         웹 개발자 김형석입니다.
       </h1>
-      <p class="main-paragraph">
+      <p class="main-paragraph screen-animation">
         2년차 웹 프론트엔드 엔지니어로 일하고 있습니다. <br />
         UI/UX 향상에 고민하는 것을 좋아합니다. <br />
         재사용성이 좋고 변화에 유연하게 대처할 수 있는 컴포넌트를 작성하기 위해
@@ -48,227 +48,180 @@
 
       <section class="section-container">
         <div class="section-title">프로젝트</div>
-        <li class="section-contents-container">
-          <div class="section-contents-title-container">
-            <div class="section-contents-title">
-              <img class="corp-logo" src="/src/image/jobkorea_logo.png" />
-              잡코리아
+        <div class="project-corp-title">잡코리아</div>
+        <article class="project-card screen-animation">
+          <div class="project-card-title-container">
+            <h3 class="project-card-title">MSA 프로젝트</h3>
+            <div class="position">
+              Frontend Developer
+              <span class="duration">(2022.07 ~ 2023.01)</span>
             </div>
           </div>
-          <ul class="section-contents-detail-container">
-            <li class="section-contents-detail-list">
-              <div class="work-experience-detail-title-container">
-                <div class="work-experience-detail-title">MSA 프로젝트</div>
-                <div class="position-text">
-                  Frontend Developer
-                  <span class="duration-text">(2022.07 ~ 2023.01)</span>
-                </div>
+          <div class="project-card-paragraph-container">
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Description</div>
+              <div class="project-card-paragraph-description">
+                .NET 소스를 next.js , TyepScript를 이용하여 micro service
+                architecture 구조로 개발 진행했습니다 (Mobile,PC,WebView)
               </div>
-              <ul class="work-experience-detail-content">
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Description
-                  </h4>
-                  <div>
-                    .NET 소스를 next.js , TyepScript를 이용하여 micro service
-                    architecture 구조로 개발 진행했습니다 (Mobile,PC,WebView)
-                  </div>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">What I did</div>
+              <ul class="project-card-paragraph-description">
+                <li class="project-card-paragraph-description-list">
+                  개인서비스의 마이페이지, 이력서 보기, 동영상·사진관리, 이력서
+                  열람·스크랩 등 다수의 페이지 개발
                 </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    What i did
-                  </h4>
-                  <ul
-                    class="work-experience-detail-content-detail-list-container"
-                  >
-                    <li class="work-experience-detail-content-detail-list">
-                      개인서비스의 마이페이지, 이력서 보기, 동영상·사진관리,
-                      이력서 열람·스크랩 등 다수의 페이지 개발
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      기업서비스의 지원자 관리 페이지 개발
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      공통 컴포넌트, 커스텀 훅 개발
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      Jenkins 이용한 배포 경험
-                    </li>
-                  </ul>
+                <li class="project-card-paragraph-description-list">
+                  기업서비스의 지원자 관리 페이지 개발
                 </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Skill stack
-                  </h4>
-                  <ul class="skill-stack-container">
-                    <li>TypeScript</li>
-                    <li>Next.js</li>
-                    <li>Sass</li>
-                    <li>Yarn</li>
-                    <li>ReactQuery</li>
-                  </ul>
+                <li class="project-card-paragraph-description-list">
+                  공통 컴포넌트, 커스텀 훅 개발
+                </li>
+                <li class="project-card-paragraph-description-list">
+                  Jenkins 이용한 배포 경험
                 </li>
               </ul>
-            </li>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Skill stack</div>
+              <div class="project-card-paragraph-skill-container">
+                <div class="skill-chip">TypeScript</div>
+                <div class="skill-chip">Next.js</div>
+                <div class="skill-chip">Sass</div>
+                <div class="skill-chip">Yarn</div>
+                <div class="skill-chip">ReactQuery</div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-            <li class="section-contents-detail-list">
-              <div class="work-experience-detail-title-container">
-                <div class="work-experience-detail-title">
-                  지도 서비스 수정 및 개발
-                </div>
-                <div class="position-text">
-                  Frontend Developer
-                  <span class="duration-text">(2023.01 ~ 2023.02)</span>
-                </div>
+        <article class="project-card screen-animation">
+          <div class="project-card-title-container">
+            <h3 class="project-card-title">지도 서비스 수정 및 개발</h3>
+            <div class="position">
+              Frontend Developer
+              <span class="duration">(2023.01 ~ 2023.02)</span>
+            </div>
+          </div>
+          <div class="project-card-paragraph-container">
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Description</div>
+              <div class="project-card-paragraph-description">
+                내 주변기업 검색, 검색 조건 설정 페이지 수정 및 개발 진행
               </div>
-              <ul class="work-experience-detail-content">
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Description
-                  </h4>
-                  <div>
-                    내 주변기업 검색, 검색 조건 설정 페이지 수정 및 개발 진행
-                  </div>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">What I did</div>
+              <ul class="project-card-paragraph-description">
+                <li class="project-card-paragraph-description-list">
+                  외주사가 개발한 내 주변 기업 검색의 로직 수정 및 추가 기능
+                  개발
                 </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    What i did
-                  </h4>
-                  <ul
-                    class="work-experience-detail-content-detail-list-container"
-                  >
-                    <li class="work-experience-detail-content-detail-list">
-                      외주사가 개발한 내 주변 기업 검색의 로직 수정 및 추가 기능
-                      개발
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      state 관리가 안되어 너무 많은 api 호출이 일어나서 발생한
-                      성능 이슈 개선, React Query 구문 수정으로 캐싱 가능하도록
-                      수정
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Skill stack
-                  </h4>
-                  <ul class="skill-stack-container">
-                    <li>TypeScript</li>
-                    <li>Next.js</li>
-                    <li>Sass</li>
-                    <li>ReactQuery</li>
-                  </ul>
+                <li class="project-card-paragraph-description-list">
+                  state 관리가 안되어 불필요한 api 호출 횟수 1/10으로 감소하도록
+                  작업, React Query 구문 수정으로 캐싱 가능하도록 수정
                 </li>
               </ul>
-            </li>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Skill stack</div>
+              <div class="project-card-paragraph-skill-container">
+                <div class="skill-chip">TypeScript</div>
+                <div class="skill-chip">Next.js</div>
+                <div class="skill-chip">Sass</div>
+                <div class="skill-chip">ReactQuery</div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-            <li class="section-contents-detail-list">
-              <div class="work-experience-detail-title-container">
-                <div class="work-experience-detail-title">
-                  이력서 작성 모바일 개편
-                </div>
-                <div class="position-text">
-                  Frontend Developer
-                  <span class="duration-text">(2023.07 ~ 2023.08)</span>
-                </div>
+        <article class="project-card screen-animation">
+          <div class="project-card-title-container">
+            <h3 class="project-card-title">이력서 작성 모바일 개편</h3>
+            <div class="position">
+              Frontend Developer
+              <span class="duration">(2023.07 ~ 2023.08)</span>
+            </div>
+          </div>
+          <div class="project-card-paragraph-container">
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Description</div>
+              <div class="project-card-paragraph-description">
+                기존의 모바일 이력서 작성 기능이 모바일 친화적이지 않아서
+                사용자의 이력서 작성 중 이탈률이 높다고 판단, 개편을 진행한
+                프로젝트
               </div>
-              <ul class="work-experience-detail-content">
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Description
-                  </h4>
-                  <div>
-                    기존의 모바일 이력서 작성 기능이 모바일 친화적이지 않아서
-                    사용자의 이력서 작성 중 이탈률이 높다고 판단, 개편을 진행한
-                    프로젝트
-                  </div>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">What I did</div>
+              <ul class="project-card-paragraph-description">
+                <li class="project-card-paragraph-description-list">
+                  기획서 및 디자인 리뷰, 의견 반영
                 </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    What i did
-                  </h4>
-                  <ul
-                    class="work-experience-detail-content-detail-list-container"
-                  >
-                    <li class="work-experience-detail-content-detail-list">
-                      기획서 및 디자인 리뷰, 의견 반영
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      Page 이동식으로 되어있던 이력서 작성을 한 페이지 및 모달
-                      사용으로 사용자로 하여금 한 페이지에서 머물고 있는 것처럼
-                      느끼도록 개발
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Skill stack
-                  </h4>
-                  <ul class="skill-stack-container">
-                    <li>TypeScript</li>
-                    <li>Next.js</li>
-                    <li>Sass</li>
-                    <li>ReactQuery</li>
-                  </ul>
+                <li class="project-card-paragraph-description-list">
+                  Page 이동식으로 되어있던 이력서 작성을 한 페이지 및 모달
+                  사용으로 사용자로 하여금 한 페이지에서 머물고 있는 것처럼
+                  느끼도록 개발
                 </li>
               </ul>
-            </li>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Skill stack</div>
+              <div class="project-card-paragraph-skill-container">
+                <div class="skill-chip">TypeScript</div>
+                <div class="skill-chip">Next.js</div>
+                <div class="skill-chip">Sass</div>
+                <div class="skill-chip">ReactQuery</div>
+              </div>
+            </div>
+          </div>
+        </article>
 
-            <li class="section-contents-detail-list">
-              <div class="work-experience-detail-title-container">
-                <div class="work-experience-detail-title">Braze 이슈 수정</div>
-                <div class="position-text">
-                  Frontend Developer
-                  <span class="duration-text">(2023.04 ~ 2023.11)</span>
-                </div>
+        <article class="project-card screen-animation">
+          <div class="project-card-title-container">
+            <h3 class="project-card-title">Braze 이슈 수정</h3>
+            <div class="position">
+              Frontend Developer
+              <span class="duration">(2023.04 ~ 2023.11)</span>
+            </div>
+          </div>
+          <div class="project-card-paragraph-container">
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Description</div>
+              <div class="project-card-paragraph-description">
+                알바몬 서비스에 부착된 Braze가 정상적으로 수집되고 있지 않아서
+                발생하는 이슈 수정
               </div>
-              <ul class="work-experience-detail-content">
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Description
-                  </h4>
-                  <div>
-                    알바몬 서비스에 부착된 Braze가 정상적으로 수집되고 있지
-                    않아서 발생하는 이슈 수정
-                  </div>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">What I did</div>
+              <ul class="project-card-paragraph-description">
+                <li class="project-card-paragraph-description-list">
+                  Braze 인스턴스 개발
                 </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    What i did
-                  </h4>
-                  <ul
-                    class="work-experience-detail-content-detail-list-container"
-                  >
-                    <li class="work-experience-detail-content-detail-list">
-                      Braze 인스턴스 개발
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      앱 개발팀과 소통을 통해 기존에 너무 많은 호출이 일어나서
-                      유실되고 있는 오류 개선을 위해 AppBridge 구조 개선
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      기존 구 소스인 .Net 소스상 Appboy 로직 분석 및 현 소스에
-                      반영
-                    </li>
-                    <li class="work-experience-detail-content-detail-list">
-                      Braze 로그 수집 모니터링
-                    </li>
-                  </ul>
+                <li class="project-card-paragraph-description-list">
+                  앱 개발팀과 소통을 통해 기존에 너무 많은 호출이 일어나서
+                  유실되고 있는 오류 개선을 위해 AppBridge 구조 개선
                 </li>
-                <li>
-                  <h4 class="work-experience-detail-content-title">
-                    Skill stack
-                  </h4>
-                  <ul class="skill-stack-container">
-                    <li>TypeScript</li>
-                    <li>Next.js</li>
-                    <li>Braze</li>
-                  </ul>
+                <li class="project-card-paragraph-description-list">
+                  기존 구 소스인 .Net 소스상 Appboy 로직 분석 및 현 소스에 반영
+                </li>
+                <li class="project-card-paragraph-description-list">
+                  Braze 로그 수집 모니터링
                 </li>
               </ul>
-            </li>
-          </ul>
-        </li>
+            </div>
+            <div class="project-card-paragraph-item">
+              <div class="project-card-paragraph-title">Skill stack</div>
+              <div class="project-card-paragraph-skill-container">
+                <div class="skill-chip">TypeScript</div>
+                <div class="skill-chip">Next.js</div>
+                <div class="skill-chip">Braze</div>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section class="section-container">
