@@ -41,7 +41,7 @@
             마이페이지, 이력서 작성, 동영상·사진관리 등 개인서비스와 관련된
             서비스를 만들었습니다
             <br />
-            Mobile,PC,WebView 대응 경험이 있습니다.
+            Mobile, PC, WebView 개발 환경에 익숙합니다.
           </p>
         </article>
       </section>
@@ -226,11 +226,11 @@
 
       <section class="section-container">
         <div class="section-title">활동</div>
-        <li class="section-contents-container">
-          <div class="section-contents-title-container">
-            <div class="section-contents-title">
-              <img class="corp-logo" src="/src/image/axis_logo.png" />
 
+        <article class="card screen-animation">
+          <div class="card-title-container">
+            <h3 class="card-title">
+              <img class="corp-logo" src="/src/image/axis_logo.png" />
               react-multi-email
               <a
                 class="link-container"
@@ -242,51 +242,60 @@
                   src="/src/image/github_logo.png"
                 />
               </a>
-            </div>
+            </h3>
           </div>
-          <ul class="section-contents-detail-container">
-            <li class="work-experience-detail-content-detail-list">
+          <div class="card-paragraph-description">
+            <li class="card-paragraph-description-list">
               react-testing-library& jest를 이용하여 test code 작성
             </li>
-            <li class="work-experience-detail-content-detail-list">
+            <li class="card-paragraph-description-list">
               불필요한 로직 제거 및 성능개선
             </li>
-            <li class="work-experience-detail-content-detail-list">
+            <li class="card-paragraph-description-list">
               일부 구식으로 작성된 문법 최신 문법 형태로 개선
             </li>
-          </ul>
-        </li>
+          </div>
+        </article>
       </section>
       <section class="section-container">
         <div class="section-title">기술</div>
       </section>
 
-      <section class="section-column-container">
+      <section class="section-no-gap-container">
         <div class="section-title">교육</div>
-        <li>
-          <div class="section-contents-title-container">
-            <div class="section-contents-title">나사렛대학교</div>
-            <div class="duration-text">2016.03 ~ 2022.02 (졸업)</div>
+        <article class="card screen-animation">
+          <div class="card-title-container">
+            <h3 class="card-title">나사렛대학교</h3>
+            <div class="duration">
+              2016.03 ~ 2022.02
+              <span class="status-chip-done">졸업</span>
+            </div>
           </div>
-          <ul class="section-contents-detail-column-container">
-            개발자가 되겠다는 생각이 커서 IT학부에 진학하였고 안드로이드
-            개발자가 되고 싶어서 Java와 xml을 통해 앱 개발의 꿈을 꾸다, 3학년
-            1학기에 웹 프론트엔드 개발에 관심이 생겨서 JS,HTML,React를
-            독학하였습니다.
-          </ul>
-        </li>
-        <li>
-          <div class="section-contents-title-container">
-            <div class="section-contents-title">웹 개발자 양성 과정 수료</div>
-            <div class="duration-text">2021.09.14 ~ 2022.03.15</div>
+          <p class="card-description">
+            개발자가 되겠다는 생각이 커서 IT학부에 진학하였고
+            <br />
+            안드로이드 개발자가 되고 싶어서 Java와 xml을 통해 앱 개발의 꿈을
+            꾸다, 3학년 1학기에 웹 프론트엔드 개발에 관심이 생겨서
+            JS,HTML,React를 독학하였습니다.
+          </p>
+        </article>
+
+        <article class="card screen-animation">
+          <div class="card-title-container">
+            <h3 class="card-title">웹 개발자 양성 과정 수료</h3>
+            <span class="duration">2021.09.14 ~ 2022.03.15</span>
           </div>
-          <ul class="section-contents-detail-column-container">
-            개발자가 되겠다는 생각이 커서 IT학부에 진학하였고 안드로이드
-            개발자가 되고 싶어서 Java와 xml을 통해 앱 개발의 꿈을 꾸다, 3학년
-            1학기에 웹 프론트엔드 개발에 관심이 생겨서 JS,HTML,React를
-            독학하였습니다.
-          </ul>
-        </li>
+          <div class="card-paragraph-title">Skill stack</div>
+          <div class="card-paragraph-description">
+            <div class="card-paragraph-skill-container">
+              <div class="skill-chip">TypeScript</div>
+              <div class="skill-chip">Next.js</div>
+              <div class="skill-chip">Sass</div>
+              <div class="skill-chip">Yarn</div>
+              <div class="skill-chip">ReactQuery</div>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
     <script src="/src/index.js"></script>
