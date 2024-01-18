@@ -1,7 +1,7 @@
-@use "./style/reset";
-@use "./style/color";
-@use "./style/font";
-@use "./style/animation";
+@use "/src/style/reset";
+@use "/src/style/color";
+@use "/src/style/font";
+@use "/src/style/animation";
 
 html body {
   max-width: 100vw;
