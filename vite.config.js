@@ -7,7 +7,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: "src/index.js",
+      input: "src/index.ts",
     },
   },
 });
