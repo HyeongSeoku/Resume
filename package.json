@@ -21,6 +21,13 @@
   },
   "homepage": "",
   "devDependencies": {
+    "sass": "^1.69.5",
     "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "pretendard": "^1.3.9",
+    "typescript": "^5.3.3"
   }
 }
