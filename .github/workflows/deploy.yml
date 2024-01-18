@@ -31,3 +31,4 @@ jobs:
         with:
           branch: gh-pages # 배포될 브랜치
           folder: dist # 빌드된 파일이 위치한 폴더
+          token: ${{ secrets.MY_PERSONAL_TOKEN }}
