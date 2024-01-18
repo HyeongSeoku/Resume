@@ -1,3 +1,4 @@
+import "./index.scss";
 import { printPDF } from "./utils";
 
 const io = new IntersectionObserver((entries) => {
