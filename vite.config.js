@@ -1,13 +1,15 @@
 import { defineConfig } from "vite";
 import * as path from "path";
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? "./" : "/",
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
   },
 
   build: {
     outDir: "dist",
+    // rollupOptions: { input: {} },
   },
 
   server: {
@@ -20,4 +22,4 @@ export default defineConfig({
       scss: {},
     },
   },
-});
+}));
