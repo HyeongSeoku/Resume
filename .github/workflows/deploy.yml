@@ -30,4 +30,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages # 배포될 브랜치
+          folder: "."
           token: ${{ secrets.MY_PERSONAL_TOKEN }}
