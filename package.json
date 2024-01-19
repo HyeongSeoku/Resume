@@ -1,0 +1,33 @@
+{
+  "name": "hyeongseok-resume",
+  "version": "1.0.0",
+  "description": "FE developer HyeongSeok Kim's Resume",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HyeongSeoku/Resume.git"
+  },
+  "keywords": [],
+  "author": "HyeongSeoku",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HyeongSeoku/Resume/issues",
+    "email": "gudtjr3437@naver.com"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "sass": "^1.69.5",
+    "vite": "^5.0.8"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1",
+    "pretendard": "^1.3.9",
+    "typescript": "^5.3.3"
+  }
+}
