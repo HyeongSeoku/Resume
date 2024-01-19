@@ -5,14 +5,19 @@ export default defineConfig({
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
   },
+
+  build: {
+    outDir: "dist",
+  },
+
+  server: {
+    port: 5174,
+    open: true,
+  },
+
   css: {
     preprocessorOptions: {
       scss: {},
-    },
-  },
-  build: {
-    rollupOptions: {
-      input: "src/index.ts",
     },
   },
 });
