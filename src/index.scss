@@ -2,6 +2,8 @@
 @use "/src/style/color";
 @use "/src/style/font";
 @use "/src/style/animation";
+@use "/src/style/modal";
+@use "/src/style/aside";
 
 html body {
   max-width: 100vw;

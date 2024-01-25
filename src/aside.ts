@@ -6,6 +6,8 @@ interface AsideMenuItem {
   text: string;
 }
 
+const asideModalContainer = document.querySelector("#aside");
+
 const ASIDE_MENU: AsideMenuItem[] = [
   {
     imgSrc: `${IMG_BASE_URL}/linkedin_icon.png`,
@@ -40,7 +42,7 @@ const createAsideItem = ({
   text,
 }: AsideMenuItem) => {
   const asideItemContainer = document.createElement("button");
-  asideItemContainer.classList.add("burger-menu-button");
+  asideItemContainer.classList.add("aside-item");
 
   if (imgSrc) {
     const asideItemImg = document.createElement("img");
@@ -60,13 +62,19 @@ const createAsideItem = ({
 
 export const createAside = () => {
   const asideContainer = document.createElement("aside");
-  asideContainer.classList.add("aside-container");
+  const asideDimmed = document.createElement("div");
+
+  asideDimmed.classList.add("aside-dimmed");
+
+  asideContainer.classList.add("aside-contents");
   asideContainer.classList.add("invisible");
 
   ASIDE_MENU.forEach((asideItem) =>
     asideContainer.appendChild(createAsideItem(asideItem))
   );
 
-  console.log("createAside", asideContainer);
-  return asideContainer;
+  asideModalContainer?.appendChild(asideDimmed);
+  asideModalContainer?.appendChild(asideContainer);
+
+  // return asideContainer;
 };
