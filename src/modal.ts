@@ -1,7 +1,21 @@
-const toggleModal = (isShow: boolean) => {};
+const modalContainer = document.querySelector("#modal");
+let modalOpenState = false;
 
-const modalHandler = (target: HTMLElement, isShow: boolean) => {
-  const modalContainer = document.querySelector("#modal");
+export const createModal = (target: HTMLElement) => {
+  const modalContents = document.createElement("div");
+  const modalDimmed = document.createElement("div");
+
+  modalDimmed.classList.add("modal-dimmed");
+
+  modalContents.classList.add("modal-contents");
+  modalContents.appendChild(target);
+
+  modalContainer?.appendChild(modalDimmed);
+  modalContainer?.appendChild(modalContents);
+  console.log("modalCOntainer", modalContainer);
+};
+
+const modalHandler = (isShow: boolean) => {
   if (isShow) {
     modalContainer?.classList.add("visible");
     modalContainer?.classList.remove("invisible");
@@ -9,10 +23,15 @@ const modalHandler = (target: HTMLElement, isShow: boolean) => {
     modalContainer?.classList.add("invisible");
     modalContainer?.classList.remove("visible");
   }
-  const modalContents = document.createElement("div");
-  modalContents.classList.add("modal-contents");
+};
 
-  modalContents.appendChild(target);
+const handleModalShow = (e: MouseEvent, isShow?: boolean) => {
+  const { target } = e;
 
-  modalContainer?.appendChild(modalContents);
+  if (target instanceof HTMLElement) {
+    if (target.classList.contains("dimmed")) {
+      modalOpenState = false;
+    }
+  }
+  return;
 };
