@@ -1,12 +1,10 @@
-import { createAside } from "./aside";
+import { createAside, createAsideObserver, upadeAsideDisplay } from "./aside";
 import "./index.scss";
-import { createModal } from "./modal";
 import { printPDF } from "./utils";
 
 let asideShow = false;
 
 window.onload = () => {
-  // createModal();
   createAside();
 };
 
