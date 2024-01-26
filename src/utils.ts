@@ -2,6 +2,8 @@ import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
 export const printPDF = (e) => {
+  console.log("TEST", e.target);
+
   const date = new Date();
   const year = date.getFullYear();
   const month = `${date.getMonth() + 1}`;

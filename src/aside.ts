@@ -12,6 +12,7 @@ interface AsideMenuItem {
   imgSrc?: string;
   linkUrl?: string;
   text: string;
+  className?: string | string[];
 }
 
 const asideModalContainer = document.querySelector("#aside");
@@ -43,6 +44,7 @@ const ASIDE_MENU: AsideMenuItem[] = [
   {
     imgSrc: `${IMG_BASE_URL}/pdf_icon.png`,
     text: "PDF 다운로드",
+    className: "pdf-button",
   },
 ];
 
@@ -70,7 +72,8 @@ export const createAsideObserver = () => {
 const handleToggleClick = (e: Event, observer: AsideObserver) => {
   if (
     e.target instanceof HTMLElement &&
-    e.target.classList.contains("aside-contents")
+    (e.target.classList.contains("aside-contents") ||
+      e.target.closest(".aside-contents"))
   ) {
     return;
   }
@@ -104,6 +107,7 @@ const createAsideItem = ({
   imgSrc = "",
   linkUrl = "",
   text,
+  className = "",
 }: AsideMenuItem) => {
   const asideItemContainer = document.createElement("button");
   asideItemContainer.classList.add("aside-item");
@@ -113,6 +117,14 @@ const createAsideItem = ({
     asideItemImg.setAttribute("src", imgSrc);
 
     asideItemContainer.appendChild(asideItemImg);
+  }
+
+  if (className) {
+    if (typeof className === "string") {
+      asideItemContainer.classList.add(className);
+    } else {
+      asideItemContainer.classList.add(...className);
+    }
   }
 
   const mainElement = document.createElement(linkUrl ? "a" : "div");
