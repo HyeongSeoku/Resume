@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "types": ["vite/client"], //설정없이 import.meta.env 사용 시 TS error 발생
+    "target": "esnext", // 혹은 "es2020", "es2022" 등 원하는 ECMAScript 버전
+    "module": "esnext", // "import.meta"를 사용하기 위해 필요합니다.
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
+    "paths": {
+      "html2canvas": ["node_modules/html2canvas"],
+      "jspdf": ["node_modules/jspdf"]
+    }
+  }
+}
