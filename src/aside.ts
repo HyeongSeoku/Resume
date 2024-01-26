@@ -73,7 +73,7 @@ const handleToggleClick = (e: Event, observer: AsideObserver) => {
   if (
     e.target instanceof HTMLElement &&
     (e.target.classList.contains("aside-contents") ||
-      e.target.classList.contains("aside-item"))
+      e.target.closest(".aside-contents"))
   ) {
     return;
   }
