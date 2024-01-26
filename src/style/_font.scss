@@ -12,6 +12,15 @@ $pc-medium: 32px;
 $pc-small: 21px;
 $pc-xsmall: 12px;
 
+$pc-h1-size: 45px;
+$pc-h2-size: 36px;
+$pc-b1-size: 30px;
+$pc-b2-size: 26px;
+$pc-b3-size: 22px;
+$pc-p1-size: 20px;
+$pc-p2-size: 14px;
+$pc-p3-size: 12px;
+
 $mobile-h1-size: 36px;
 $mobile-h2-size: 24px;
 $mobile-b1-size: 20px;
@@ -26,41 +35,74 @@ $font-weight-medium: 500;
 $font-weight-small: 300;
 
 @mixin H1 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-h1-size;
+    font-weight: $font-weight-bold;
+  }
+
   font-size: $mobile-h1-size;
   font-weight: $font-weight-bold;
 }
 
 @mixin H2 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-h2-size;
+    font-weight: $font-weight-bold;
+  }
   font-size: $mobile-h2-size;
   font-weight: $font-weight-bold;
 }
 
 @mixin B1 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-b1-size;
+    font-weight: $font-weight-medium;
+  }
   font-size: $mobile-b1-size;
   font-weight: $font-weight-medium;
 }
 
 @mixin B2 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-b2-size;
+    font-weight: $font-weight-medium;
+  }
   font-size: $mobile-b2-size;
   font-weight: $font-weight-medium;
 }
 
 @mixin B3 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-b3-size;
+    font-weight: $font-weight-medium;
+  }
   font-size: $mobile-b3-size;
   font-weight: $font-weight-medium;
 }
 
 @mixin P1 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-p1-size;
+    font-weight: $font-weight-medium;
+  }
   font-size: $mobile-p1-size;
   font-weight: $font-weight-medium;
 }
 
 @mixin P2 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-p2-size;
+    font-weight: $font-weight-small;
+  }
   font-size: $mobile-p2-size;
   font-weight: $font-weight-small;
 }
 
 @mixin P3 {
+  @media screen and (min-width: 1024px) {
+    font-size: $pc-p3-size;
+    font-weight: $font-weight-small;
+  }
   font-size: $mobile-p3-size;
   font-weight: $font-weight-small;
 }

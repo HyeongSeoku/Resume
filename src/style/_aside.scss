@@ -1,0 +1,54 @@
+@use "/src/style/color";
+@use "/src/style/font";
+
+#aside {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.aside-dimmed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  //   background-color: color.$Dimmed;
+}
+
+.aside-contents {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  padding: 5px 8px;
+  border-radius: 8px;
+  gap: 5px;
+  flex-direction: column;
+  background-color: #fff;
+  z-index: 1000;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  @include font.P1;
+}
+
+.aside-item {
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+  padding: 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+  & > img {
+    width: 20px;
+    height: 100%;
+  }
+}
