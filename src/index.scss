@@ -8,9 +8,9 @@
 @mixin safe-area-padding {
   @supports (padding: env(safe-area-inset-top)) {
     padding-top: calc(20px + env(safe-area-inset-top));
-    padding-right: calc(25px + env(safe-area-inset-right));
+    padding-right: calc(28px + env(safe-area-inset-right));
     padding-bottom: calc(20px + env(safe-area-inset-bottom));
-    padding-left: calc(25px + env(safe-area-inset-left));
+    padding-left: calc(28px + env(safe-area-inset-left));
   }
 }
 
@@ -57,15 +57,15 @@ html[data-theme="light"] {
 .main-container {
   display: flex;
   flex-direction: column;
-  padding: 20px 25px;
+  padding: 20px 28px;
 
   @include safe-area-padding;
 }
 
 .aside-toggle-button {
   position: fixed;
-  bottom: 8px;
-  right: 4px;
+  bottom: 15px;
+  right: 5px;
   width: 20px;
   height: 20px;
   display: flex;
