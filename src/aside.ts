@@ -21,6 +21,11 @@ const asideToggleButton = document.querySelector(".aside-toggle-button");
 
 const ASIDE_MENU: AsideMenuItem[] = [
   {
+    imgSrc: `${IMG_BASE_URL}/email_icon.png`,
+    linkUrl: "mailto:gudtjr3437@gmail.com",
+    text: "이메일 보내기",
+  },
+  {
     imgSrc: `${IMG_BASE_URL}/linkedin_icon.png`,
     linkUrl:
       "https://www.linkedin.com/in/%ED%98%95%EC%84%9D-%EA%B9%80-901539232/",
