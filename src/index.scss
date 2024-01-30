@@ -108,6 +108,21 @@ html[data-theme="light"] {
   }
 }
 
+.contact-title {
+  @include font.B1;
+  font-weight: font.$font-weight-bold;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-item {
+  width: 100%;
+}
+
 .card {
   &:not(:last-child) {
     &::after {
