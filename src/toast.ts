@@ -6,23 +6,25 @@ const modalObserver = createModalObserver();
 export const showToast = (text: string) => {
   const { container, contents, closeButton } = createToastElements();
   if (contents instanceof HTMLElement) {
+    console.log("text", text);
     contents.innerText = text;
   }
 
+  contents.appendChild(closeButton);
   container.appendChild(contents);
-  container.appendChild(closeButton);
 
   modalContainer.appendChild(container);
 
   modalObserver.subscribe(updateModalDisplay);
   modalObserver.toggleModal(true);
+
   setTimeout(() => {
     const modalOepnState = modalObserver.getModalState();
     if (modalOepnState) {
       modalObserver.toggleModal(false);
       modalContainer.removeChild(container);
     }
-  }, 300000);
+  }, 3000000);
 };
 
 const createToastElements = () => {

@@ -60,8 +60,7 @@ const copyTextToClipBoard = (element: HTMLElement) => {
   navigator.clipboard
     .writeText(textToCopy)
     .then(function () {
-      // TOOD: 클립보드 토스트 메세지 show 메소드
-      showToast("클립보드에 복사되었습니다 : textToCopy");
+      showToast(`클립보드에 복사되었습니다`);
     })
     .catch(function (err) {
       console.error("클립보드 복사 실패:", err);

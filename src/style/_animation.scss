@@ -9,6 +9,28 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    bottom: 10px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
 // FIXME: 해당 부분 애니메이션 수정 필요
 @keyframes color-spread {
   0% {
