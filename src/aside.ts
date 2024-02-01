@@ -53,7 +53,7 @@ const ASIDE_MENU: AsideMenuItem[] = [
   },
 ];
 
-export const createAsideObserver = () => {
+export const createAsideObserver = (): AsideObserver => {
   let observers: Observer[] = [];
   let isOpen = false;
 
@@ -86,7 +86,7 @@ const handleToggleClick = (e: Event, observer: AsideObserver) => {
   observer.toggleAside();
 };
 
-export const upadeAsideDisplay = (isOpen: boolean) => {
+export const updatedAsideDisplay = (isOpen: boolean) => {
   if (asideModalContainer) {
     if (isOpen) {
       asideModalContainer.classList.add("visible");
@@ -160,7 +160,7 @@ export const createAside = () => {
   asideModalContainer?.classList.add("invisible");
 
   const asideObserver = createAsideObserver();
-  asideObserver.subscribe(upadeAsideDisplay);
+  asideObserver.subscribe(updatedAsideDisplay);
 
   asideModalContainer?.addEventListener("click", (e) =>
     handleToggleClick(e, asideObserver)

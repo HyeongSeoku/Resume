@@ -1,0 +1,12 @@
+#toast {
+  display: fixed;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: 8px;
+
+  z-index: 10000;
+}

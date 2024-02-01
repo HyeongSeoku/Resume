@@ -1,5 +1,7 @@
 import { createAside } from "./aside";
 import "./index.scss";
+import { createModal } from "./modal";
+import { showToast } from "./toast";
 import { printPDF } from "./utils";
 
 const createPdfElement = () => {
@@ -26,6 +28,7 @@ const createPdfElement = () => {
 document.addEventListener("DOMContentLoaded", function () {
   createAside();
   createPdfElement();
+  // createModal();
 
   const pdfButton = document.querySelector(".pdf-button");
   pdfButton?.addEventListener("click", printPDF);
@@ -58,7 +61,7 @@ const copyTextToClipBoard = (element: HTMLElement) => {
     .writeText(textToCopy)
     .then(function () {
       // TOOD: 클립보드 토스트 메세지 show 메소드
-      console.log("클립보드에 복사 성공", textToCopy);
+      showToast("클립보드에 복사되었습니다 : textToCopy");
     })
     .catch(function (err) {
       console.error("클립보드 복사 실패:", err);

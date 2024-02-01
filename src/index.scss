@@ -4,6 +4,7 @@
 @use "/src/style/animation";
 @use "/src/style/modal";
 @use "/src/style/aside";
+@use "/src/style/toast";
 
 @mixin safe-area-padding {
   @supports (padding: env(safe-area-inset-top)) {

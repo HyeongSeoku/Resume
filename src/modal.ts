@@ -1,37 +1,83 @@
-const modalContainer = document.querySelector("#modal");
-let modalOpenState = false;
+type Observer = (value: boolean) => void;
 
-export const createModal = (target: HTMLElement) => {
+interface ModalObserver {
+  subscribe: (observer: Observer) => void;
+  unsubscribe: (observer: Observer) => void;
+  toggleModal: (isOpen?: boolean) => void;
+  getModalState: () => boolean;
+}
+
+const modalContainer = document.querySelector("#modal");
+const modalToggleButton = document.querySelector(".modal-toggle-button");
+
+export const createModalObserver = (): ModalObserver => {
+  let observers: Observer[] = [];
+  let isOpen = false;
+
+  return {
+    subscribe: (observer: Observer) => {
+      observers.push(observer);
+    },
+    unsubscribe: (observer: Observer) => {
+      observers = observers.filter((obs) => obs !== observer);
+    },
+    toggleModal: (curIsOpen?: boolean) => {
+      isOpen = curIsOpen !== null ? curIsOpen : !isOpen;
+      console.log("isopen", isOpen);
+      observers.forEach((observer) => observer(isOpen));
+    },
+    getModalState: () => {
+      return isOpen;
+    },
+  };
+};
+
+const handleToggleClick = (e: Event, observer: ModalObserver) => {
+  if (
+    e.target instanceof HTMLElement &&
+    (e.target.classList.contains("modal-contents") ||
+      e.target.closest(".modal-contents"))
+  ) {
+    return;
+  }
+
+  observer.toggleModal();
+};
+
+export const updateModalDisplay = (isOpen: boolean) => {
+  if (modalContainer) {
+    if (isOpen) {
+      modalContainer.classList.add("visible");
+      modalContainer.classList.remove("invisible");
+    } else {
+      modalContainer.classList.remove("visible");
+      modalContainer.classList.add("invisible");
+    }
+  }
+};
+
+export const createModal = (target?: HTMLElement) => {
   const modalContents = document.createElement("div");
   const modalDimmed = document.createElement("div");
+
+  console.log("TEST ETSTSE");
 
   modalDimmed.classList.add("modal-dimmed");
 
   modalContents.classList.add("modal-contents");
-  modalContents.appendChild(target);
+  target && modalContents.appendChild(target);
 
   modalContainer?.appendChild(modalDimmed);
   modalContainer?.appendChild(modalContents);
-  console.log("modalCOntainer", modalContainer);
-};
 
-const modalHandler = (isShow: boolean) => {
-  if (isShow) {
-    modalContainer?.classList.add("visible");
-    modalContainer?.classList.remove("invisible");
-  } else {
-    modalContainer?.classList.add("invisible");
-    modalContainer?.classList.remove("visible");
-  }
-};
+  const modalObserver = createModalObserver();
+  modalObserver.subscribe(updateModalDisplay);
 
-const handleModalShow = (e: MouseEvent, isShow?: boolean) => {
-  const { target } = e;
+  modalContainer?.addEventListener("click", (e) =>
+    handleToggleClick(e, modalObserver)
+  );
 
-  if (target instanceof HTMLElement) {
-    if (target.classList.contains("dimmed")) {
-      modalOpenState = false;
-    }
-  }
-  return;
+  modalToggleButton?.addEventListener("click", (e) =>
+    handleToggleClick(e, modalObserver)
+  );
 };
