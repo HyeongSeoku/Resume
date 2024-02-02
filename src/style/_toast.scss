@@ -18,6 +18,11 @@
   @include animation.fadeIn(1s);
 }
 
+.toast-modal {
+  width: fit-content !important;
+  height: fit-content !important;
+}
+
 .toast-close {
   @include animation.fadeOut(1s);
 }

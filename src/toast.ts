@@ -6,6 +6,7 @@ const modalObserver = createModalObserver();
 let toastTimeout: ReturnType<typeof setTimeout>;
 
 export const showToast = async (text: string) => {
+  console.log("TEST SHOW");
   const { container, contents, closeButton } = createToastElements();
   if (contents instanceof HTMLElement) {
     contents.innerText = text;
@@ -15,17 +16,15 @@ export const showToast = async (text: string) => {
   container.appendChild(contents);
 
   modalContainer.appendChild(container);
+  modalContainer.classList.add("toast-modal");
 
   modalObserver.subscribe(updateModalDisplay);
   modalObserver.toggleModal(true);
 
   startToastTimer(container);
 
-  console.log("toastTimeout", toastTimeout);
-
   container.addEventListener("mouseover", () => {
     clearTimeout(toastTimeout);
-    console.log("HOVER", toastTimeout);
   });
 
   container.addEventListener("mouseout", () => {
@@ -49,28 +48,30 @@ const startToastTimer = (target?: Element) => {
 };
 
 const createToastElements = () => {
-  let toastContainer = document.querySelector("#toast");
-  let toastContents = document.querySelector(".toast-contents");
-  let toastCloseButton = document.querySelector(".toast-close-btn");
+  const existToastContainer = document.querySelector("#toast");
 
-  if (!document.querySelector("#toast")) {
-    toastContainer = document.createElement("div");
-    toastContainer.setAttribute("id", "toast");
-
-    toastContents = document.createElement("div");
-    toastContents.classList.add("toast-contents");
-
-    toastCloseButton = document.createElement("button");
-    if (toastCloseButton instanceof HTMLElement) {
-      toastCloseButton.innerText = "X";
-    }
-    toastCloseButton.classList.add("toast-close-btn");
+  if (existToastContainer) {
+    modalContainer.removeChild(existToastContainer);
   }
+
+  const toastContainer = document.createElement("div");
+  toastContainer.setAttribute("id", "toast");
+
+  const toastContents = document.createElement("div");
+  toastContents.classList.add("toast-contents");
+
+  const toastCloseButton = document.createElement("button");
+  if (toastCloseButton instanceof HTMLElement) {
+    toastCloseButton.innerText = "X";
+  }
+  toastCloseButton.classList.add("toast-close-btn");
 
   toastCloseButton.addEventListener("click", () => {
     modalContainer.removeChild(toastContainer);
     modalObserver.toggleModal(false);
   });
+
+  console.log("TEST CREATE");
 
   return {
     container: toastContainer,
