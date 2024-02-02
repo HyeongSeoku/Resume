@@ -9,7 +9,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     bottom: 0;
     opacity: 0;
@@ -20,7 +20,7 @@
   }
 }
 
-@keyframes fadeOut {
+@keyframes fade-out {
   from {
     bottom: 10px;
     opacity: 1;
@@ -43,6 +43,14 @@
     height: 100%;
     opacity: 1;
   }
+}
+
+@mixin fadeIn($duration: 1s) {
+  animation: fade-in $duration ease-in forwards;
+}
+
+@mixin fadeOut($duration: 1s) {
+  animation: fade-out $duration ease-out forwards;
 }
 
 @mixin fadeInSlideUp($duration: 1s) {

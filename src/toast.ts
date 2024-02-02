@@ -3,10 +3,11 @@ import { createModalObserver, updateModalDisplay } from "./modal";
 const modalContainer = document.querySelector("#modal");
 const modalObserver = createModalObserver();
 
-export const showToast = (text: string) => {
+let toastTimeout: ReturnType<typeof setTimeout>;
+
+export const showToast = async (text: string) => {
   const { container, contents, closeButton } = createToastElements();
   if (contents instanceof HTMLElement) {
-    console.log("text", text);
     contents.innerText = text;
   }
 
@@ -18,13 +19,33 @@ export const showToast = (text: string) => {
   modalObserver.subscribe(updateModalDisplay);
   modalObserver.toggleModal(true);
 
-  setTimeout(() => {
-    const modalOepnState = modalObserver.getModalState();
-    if (modalOepnState) {
-      modalObserver.toggleModal(false);
-      modalContainer.removeChild(container);
-    }
-  }, 3000000);
+  startToastTimer(container);
+
+  console.log("toastTimeout", toastTimeout);
+
+  container.addEventListener("mouseover", () => {
+    clearTimeout(toastTimeout);
+    console.log("HOVER", toastTimeout);
+  });
+
+  container.addEventListener("mouseout", () => {
+    startToastTimer(container);
+  });
+};
+
+const startToastTimer = (target?: Element) => {
+  toastTimeout = setTimeout(() => {
+    modalContainer.classList.add("toast-close");
+
+    setTimeout(() => {
+      const modalOpenState = modalObserver.getModalState();
+      if (modalOpenState) {
+        modalObserver.toggleModal(false);
+        modalContainer.removeChild(target);
+      }
+      modalContainer.classList.remove("toast-close");
+    }, 1000);
+  }, 2500);
 };
 
 const createToastElements = () => {
