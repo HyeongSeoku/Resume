@@ -1,0 +1,46 @@
+@use "/src/style/color";
+@use "/src/style/font";
+@use "/src/style/animation";
+
+#toast {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 10px;
+  width: calc(100% - 20px);
+  height: fit-content;
+  background-color: #333333;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  @include animation.fadeIn(1s);
+}
+
+.toast-modal {
+  width: fit-content !important;
+  height: fit-content !important;
+}
+
+.toast-close {
+  @include animation.fadeOut(1s);
+}
+
+.toast-contents {
+  @include font.B3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-weight: font.$font-weight-small;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.toast-close-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  color: #ffffff;
+}

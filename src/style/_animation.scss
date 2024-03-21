@@ -9,6 +9,28 @@
   }
 }
 
+@keyframes fade-in {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    bottom: 10px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
 // FIXME: 해당 부분 애니메이션 수정 필요
 @keyframes color-spread {
   0% {
@@ -23,8 +45,16 @@
   }
 }
 
+@mixin fadeIn($duration: 1s) {
+  animation: fade-in $duration ease-in forwards;
+}
+
+@mixin fadeOut($duration: 1s) {
+  animation: fade-out $duration ease-out forwards;
+}
+
 @mixin fadeInSlideUp($duration: 1s) {
-  transform: translateY(20px);
+  // transform: translateY(20px);
   animation: fade-in-slide-up $duration ease-out forwards;
 }
 

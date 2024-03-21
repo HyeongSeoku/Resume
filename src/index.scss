@@ -4,6 +4,7 @@
 @use "/src/style/animation";
 @use "/src/style/modal";
 @use "/src/style/aside";
+@use "/src/style/toast";
 
 @mixin safe-area-padding {
   @supports (padding: env(safe-area-inset-top)) {
@@ -106,6 +107,42 @@ html[data-theme="light"] {
     @include font.H2;
     margin-bottom: 5px;
   }
+}
+
+.contact-title {
+  @include font.B1;
+  font-weight: font.$font-weight-bold;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-item {
+  @include font.P1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  // font-weight: font.$font-weight-small;
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.contact-info {
+  @include font.P3;
+  color: color.$Gray500;
+  margin: 5px 0 8px;
+}
+
+.contact-list-item-text {
+  cursor: pointer;
 }
 
 .card {

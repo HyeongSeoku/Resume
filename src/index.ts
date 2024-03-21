@@ -1,5 +1,7 @@
 import { createAside } from "./aside";
 import "./index.scss";
+import { createModal } from "./modal";
+import { showToast } from "./toast";
 import { printPDF } from "./utils";
 
 const createPdfElement = () => {
@@ -26,11 +28,13 @@ const createPdfElement = () => {
 document.addEventListener("DOMContentLoaded", function () {
   createAside();
   createPdfElement();
+  // createModal();
 
   const pdfButton = document.querySelector(".pdf-button");
   pdfButton?.addEventListener("click", printPDF);
 });
 
+// fadeInAnimation
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const { target } = entry;
@@ -38,8 +42,6 @@ const io = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       target.classList.remove("invisible");
       target.classList.add("screen-in");
-    } else {
-      // target.classList.remove("screen-in");
     }
   });
 });
@@ -48,4 +50,27 @@ const fadeInAnimationitems = document.querySelectorAll(".screen-animation");
 fadeInAnimationitems.forEach((item) => {
   item.classList.add("invisible");
   io.observe(item);
+});
+
+// 클립보드
+const contactTextList = document.querySelectorAll(".contact-list-item-text");
+
+const copyTextToClipBoard = (element: HTMLElement) => {
+  const textToCopy = element.innerText;
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(function () {
+      showToast(`클립보드에 복사되었습니다`);
+    })
+    .catch(function (err) {
+      console.error("클립보드 복사 실패:", err);
+    });
+};
+
+contactTextList.forEach((ele) => {
+  if (ele instanceof HTMLElement) {
+    ele.addEventListener("click", () => {
+      copyTextToClipBoard(ele);
+    });
+  }
 });
