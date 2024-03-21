@@ -53,7 +53,8 @@ const createToastElements = () => {
   if (existToastContainer) {
     modalContainer.removeChild(existToastContainer);
   }
-
+  clearTimeout(toastTimeout);
+  modalContainer.classList.remove("toast-close");
   const toastContainer = document.createElement("div");
   toastContainer.setAttribute("id", "toast");
 

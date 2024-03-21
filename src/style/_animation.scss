@@ -54,7 +54,7 @@
 }
 
 @mixin fadeInSlideUp($duration: 1s) {
-  transform: translateY(20px);
+  // transform: translateY(20px);
   animation: fade-in-slide-up $duration ease-out forwards;
 }
 
