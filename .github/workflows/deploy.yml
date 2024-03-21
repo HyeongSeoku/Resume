@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18" # 또는 원하는 노드 버전
+          node-version: "20" # Node.js 20으로 변경
 
       - name: Install Dependencies
         run: npm install
